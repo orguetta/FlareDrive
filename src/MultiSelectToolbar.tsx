@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { IconButton, Menu, MenuItem, Slide, Toolbar } from "@mui/material";
 import {
-  Close as CloseIcon,
-  Delete as DeleteIcon,
+  X as CloseIcon,
+  Trash as DeleteIcon,
   Download as DownloadIcon,
-  MoreHoriz as MoreHorizIcon,
-} from "@mui/icons-material";
+  MoreHorizontal as MoreHorizIcon,
+} from "lucide-react";
 
 function MultiSelectToolbar({
   multiSelected,

@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "@shadcn/ui";
 import {
   createTheme,
   CssBaseline,

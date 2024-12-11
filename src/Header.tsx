@@ -1,6 +1,6 @@
 import { IconButton, InputBase, Menu, MenuItem, Toolbar } from "@mui/material";
 import { useState } from "react";
-import { MoreHoriz as MoreHorizIcon } from "@mui/icons-material";
+import { MoreHorizontal } from "lucide-react";
 
 function Header({
   search,
@@ -33,7 +33,7 @@ function Header({
         sx={{ marginLeft: 0.5 }}
         onClick={(e) => setAnchorEl(e.currentTarget)}
       >
-        <MoreHorizIcon />
+        <MoreHorizontal />
       </IconButton>
       <Menu
         anchorEl={anchorEl}

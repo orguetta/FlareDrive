@@ -1,30 +1,23 @@
-import AudioFileIcon from "@mui/icons-material/AudioFile";
-import CodeIcon from "@mui/icons-material/Code";
-import FolderIcon from "@mui/icons-material/Folder";
-import FolderZipOutlinedIcon from "@mui/icons-material/FolderZipOutlined";
-import ImageIcon from "@mui/icons-material/Image";
-import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
-import PdfIcon from "@mui/icons-material/PictureAsPdf";
-import VideoFileIcon from "@mui/icons-material/VideoFile";
+import { Image, FileAudio, FileVideo, File, FileCode, FileArchive, FileText, Folder, FilePdf } from 'lucide-react';
 
 function MimeIcon({ contentType }: { contentType: string }) {
-  const fallbackIcon = <InsertDriveFileOutlinedIcon fontSize="large" />;
+  const fallbackIcon = <File size={36} />;
   if (typeof contentType !== "string") return fallbackIcon;
 
   return contentType.startsWith("image/") ? (
-    <ImageIcon fontSize="large" />
+    <Image size={36} />
   ) : contentType.startsWith("audio/") ? (
-    <AudioFileIcon fontSize="large" />
+    <FileAudio size={36} />
   ) : contentType.startsWith("video/") ? (
-    <VideoFileIcon fontSize="large" />
+    <FileVideo size={36} />
   ) : contentType === "application/pdf" ? (
-    <PdfIcon fontSize="large" />
+    <FilePdf size={36} />
   ) : ["application/zip", "application/gzip"].includes(contentType) ? (
-    <FolderZipOutlinedIcon fontSize="large" />
+    <FileArchive size={36} />
   ) : contentType.startsWith("text/") ? (
-    <CodeIcon fontSize="large" />
+    <FileCode size={36} />
   ) : contentType === "application/x-directory" ? (
-    <FolderIcon fontSize="large" />
+    <Folder size={36} />
   ) : (
     fallbackIcon
   );

@@ -3,10 +3,10 @@ import React, { forwardRef, useCallback, useMemo } from "react";
 import { Button, Card, Drawer, Fab, Grid, Typography } from "@mui/material";
 import {
   Camera as CameraIcon,
-  CreateNewFolder as CreateNewFolderIcon,
+  FolderPlus as CreateNewFolderIcon,
   Image as ImageIcon,
   Upload as UploadIcon,
-} from "@mui/icons-material";
+} from "lucide-react";
 import { createFolder } from "./app/transfer";
 import { useUploadEnqueue } from "./app/transferQueue";
 
